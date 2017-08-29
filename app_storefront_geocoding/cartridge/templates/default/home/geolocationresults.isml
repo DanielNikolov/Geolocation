@@ -1,0 +1,14 @@
+<!--- TEMPLATENAME: geolocationresults.isml --->
+<div id="results-container">
+	<button type="button" class="btn btn-info toggler" data-toggle="collapse" data-target="#results-data">
+		<isprint value="${Resouce.msg('geolocation.title.searchresult', 'forms', null)}" />
+	</button>
+	<div id="results-data" class="collapse in container">
+		<isif condition="${empty(pdict.GeoLocation)}">
+			<isprint value="${Resource.msg('geolocation.noresults', 'forms', null)" />
+		<iselse/>
+			${pdict.GeoLocation}
+		</isif> 
+	</div>
+</div>
+

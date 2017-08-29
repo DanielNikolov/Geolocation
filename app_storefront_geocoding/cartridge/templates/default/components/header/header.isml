@@ -1,0 +1,10 @@
+<iscontent type="text/html" charset="UTF-8" compact="true"/>
+
+<div class="top-banner" role="banner">
+	<h1 class="primary-logo">
+		<a href="${URLUtils.url('Geocoding-Show')}" title="${Resource.msgf('global.homepage.tooltip', 'locale', null, Resource.msg('global.storename', 'locale', null), Resource.msg('global.home', 'locale', null) )}">
+			<img src="${URLUtils.staticURL('/images/logo.png')}" alt="${Resource.msg('global.storename', 'locale', null)}">
+			<span class="visually-hidden">${Resource.msg('global.storename', 'locale', null)}</span>
+		</a>
+	</h1>
+</div><!-- /header -->

@@ -1,0 +1,17 @@
+importPackage( dw.system );
+importPackage( dw.svc );
+importPackage( dw.net );
+var StringUtils = require('dw/util/StringUtils');
+
+ServiceRegistry.configure('int_google.rest.GeolocationService', {
+	createRequest: function(svc : HTTPService, address, apiKey) {
+		svc.addHeader('Content-Type', 'application/json');
+		svc.setRequestMethod('GET');
+		svc.URL = StringUtils.format(svc.URL, address, apiKey);
+		
+		return null;
+	},
+	parseResponse: function(svc : HTTPService, client : HTTPClient) {
+		return JSON.parse(client.getText());
+	}
+});
